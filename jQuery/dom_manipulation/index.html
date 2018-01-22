@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Crash Course | Events</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <style>
+            body{
+                font-size: 17px;
+                font-family: arial;
+                background: #f4f4f4;
+                line-height: 1.5em;
+            }
+            header{
+                background:#333;
+                color:#fff;
+                padding:20px;
+                text-align: center;
+                border-bottom: 4px #000 solid;
+                margin-bottom: 10px;
+            }
+            #container{
+                width:90%;
+                margin:auto;
+                padding:10px;
+            }
+            .myClass {
+                color:blue;
+                background:black;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>jQuery Crash Course | DOM Manipulation</h1>
+        </header>
+        <div id="container">
+        <button id="btn1">Button 1</button>
+        <p class="para1">This is a paragraph</p>
+        <p class="para2">This is another paragraph</p>
+        <div id="myDiv"></div>
+        <input type="text" id="newItem">
+        <ul id="list">
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3</li>
+            <li>List Item 4</li>
+        </ul>
+        <a href="http://google.com">Google</a>
+        <input type="text" id="newItem">
+        <ul id="users"></ul>
+        </div>
+        <script>
+            $(document).ready(function () {
+                //ul list items to array
+                // var newArr = $('ul#list li').toArray();
+                // $.each(newArr, function (i, val) {
+                //items values can be manipulated here and reapplied to UL
+                //     console.log(val.innerHTML);
+                // });
+                //loop through array and add items to list
+                // var myArr = ['Brad','Kelly','Nate','Bob'];
+                // $.each(myArr, function (i, val) {
+                //     $('#users').append('<li>' + val + '</li>');
+                // });
+                //loop through and array
+                // var myArr = ['Brad','Kelly','Nate','Bob'];
+                // $.each(myArr, function (i, val) {
+                //     console.log(val);
+                // });
+                //manipulate items based on the keys used
+                // $('#newItem').keyup(function (e) {
+                //     var code = e.which;
+                //     //console.log(code);
+                //     if(code == 13){
+                //         console.log(e);
+                //         e.preventDefault();
+                //         $('ul').append('<li>'+e.target.value+'</li>');
+                //     }
+                // });
+                //wrap item's in enclosing tags
+                //$('p').wrap('<h1>')
+                //remove item's attribute
+                //$('a').removeAttr('target');
+                //get the value of an item's attribute
+                //alert($('a').attr('href'));
+                //change an item's attribute
+                //$('a').attr('target', '_blank');
+                //remove item from the DOM
+                //$('ul').detach();
+                //clear elements from a UL
+                //$('ul').empty();
+                //before or after a control
+                // $('ul').before('<h1>Hello</h1>');
+                // $('ul').after('<h1>World</h1>');
+                //append paragraph 1 to parapraph 2
+                //$('.para1').appendTo('.para2');
+                //add item to list at the beginning
+                //$('ul').prepend('<li>Append List Item</li>');
+                //add item to list at the end
+                // $('ul').append('<li>Append List Item</li>');
+                //add html element
+                //$('#myDiv').html('<h3>Hello, World!</h3>');
+                //get text of an html element
+                //alert($('#myDiv').text());
+                //change text
+                // $('#myDiv').text('Hello, World!');
+                // $('#btn1').click(function () {
+                //     $('p.para2').toggleClass('myClass');
+                // })
+                ////manipulate multiple css elements
+                //$('p.para1').css({color:'red', background:'#cccccc'});
+                //change item's class
+                //$('p.para2').addClass('myClass');
+                //revert item's class
+                //$('p.para2').removeClass('myClass');
+                //manipulate single css element
+                //$('p.para1').css('color','red');
+            });
+        </script>
+    </body>
+</html>

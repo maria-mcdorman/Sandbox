@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Crash Course | Events</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <style>
+            body{
+                font-size: 17px;
+                font-family: arial;
+                background: #f4f4f4;
+                line-height: 1.5em;
+            }
+            header{
+                background:#333;
+                color:#fff;
+                padding:20px;
+                text-align: center;
+                border-bottom: 4px #000 solid;
+                margin-bottom: 10px;
+            }
+            #container{
+                width:90%;
+                margin:auto;
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>jQuery Crash Course | Events!</h1>
+        </header>
+        <div id="container">
+            <h3>Mouse Events</h3>
+            <button id="btn1" class="btnClass">Button 1</button>
+            <button id="btn2">Button 2</button>
+            <p class="para1">jQuery is built on top of JavaScript, a rich and expressive language in its own right. This section covers the basic concepts of JavaScript, as well as some frequent pitfalls for people who have not used JavaScript before. While it will be of particular value to people with no programming experience</p>
+            <h5 id='coords'></h1>
+            <hr>
+            <form id="form">
+                <label>Name</label><br>
+                <input type="text" id="name" name="name">
+                <br>
+                <label>Email</label><br>
+                <input type="text" id="email" name="email">
+                <br>
+                <label>Gender</label><br>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <script>
+            $(document).ready(function () {
+                //handle submit event and submitted values
+                // $('#form').submit(function (e) {
+                //     e.preventDefault();
+                //     var name = $('input#name').val();
+                //     console.log(name);
+                // });
+                //handles the change event of a select list
+                // $('select#gender').change(function (e) {
+                //     console.log(e.target.value);
+                // });
+                //gets the key that was just pressed   
+                //from keyup event             
+                // $('input').keyup(function (e) {
+                //     console.log(e.target.value);
+                // });
+                //this function works for all inputs
+                //the 'this' keyword instead of id
+                //specifies the control currently in focus
+                //and blurred
+                // $('input').focus(function () {
+                //     $(this).css('background','pink');
+                // });
+                // $('input').blur(function () {
+                //     $(this).css('background','');
+                // });
+                //output coordinates to control
+                // $(document).on('mousemove',function(e){
+                //     $('#coords').html('Coordinates: X: ' + e.clientX + ' Y: ' + e.clientY)
+                // });
+                //coordinates of full document
+                // $(document).on('mousemove',function(e){
+                //     console.log('Coordinates: X: ' + e.clientX + ' Y: ' + e.clientY)
+                // });
+                //coordinates of mouse over button
+                // $('#btn1').on('mousemove',function(e){
+                //     console.log('Coordinates: X: ' + e.clientX + ' Y: ' + e.clientY)
+                // });
+                //every event have an 'e' which can be examined and 
+                //used in further functions/actions
+                // $('#btn1').click(function(e){
+                //     console.log(e.currentTarget.id);
+                //     console.log(e.currentTarget.innerHTML);
+                //     console.log(e.currentTarget.outerHTML);
+                //     console.log(e.currentTarget.className);
+                // });
+                //mouse up and down events
+                // $('#btn1').on('mousedown',function () {
+                //     $('p.para1').toggle();
+                // });
+                // $('#btn1').on('mouseup',function () {
+                //     $('p.para1').toggle();
+                // });
+                //mouse move enter
+                // $('#btn1').on('mousemove',function () {
+                //     $('p.para1').toggle();
+                // });
+                //using 'on' to replace the shorthand 'hover
+                // $('#btn1').on('mouseleave',function () {
+                //     $('p.para1').toggle();
+                // });
+                // $('#btn1').on('mouseenter',function () {
+                //     $('p.para1').toggle();
+                // });
+                //hover event ***hover is short hand for 
+                //mouseenter and mouseleave
+                // $('#btn1').hover(function () {
+                //     $('p.para1').toggle();
+                // });
+                //double click event
+                // $('#btn1').dblclick(function () {
+                //     $('p.para1').toggle();
+                // });
+                //use button to toggle
+                // $('#btn1').on('click', function () {
+                //     $('p.para1').toggle();
+                // });
+                //use on control to change another
+                // $('#btn1').on('click', function () {
+                //     $('p.para1').hide();
+                // });
+                // $('#btn2').on('click', function () {
+                //     $('p.para1').show();
+                // });
+                //specific control using 'on' you can specify
+                //a lot of different events
+                // $('#btn1').on('click', function () {
+                //     alert('button clicked');
+                // });
+                //specific control specific event 'click'
+                // $('#btn1').click(function () {
+                //     alert('button clicked');
+                // });
+                //all buttons
+                // $('button').click(function () {
+                //     alert('button clicked');
+                // });
+            });
+        </script>
+    </body>
+</html>
