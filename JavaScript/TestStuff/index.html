@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var SQL = "EXEC [Report].[USP_Report_LA] ";
+            SQL += "@Payer = N'MCD', @Payer_Abbreviation = N'CLM,RPT,CLM,DNT,PRV,LU,PHM,ELG,UNK'";
+            SQL += ", @Entity = N'99MCD1', @Environment = N'TEST'";
+		console.log(SQL);
+	</script>
+</body>
+</html>

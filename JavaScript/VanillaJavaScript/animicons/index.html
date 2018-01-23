@@ -1,0 +1,87 @@
+<!-- FontAwesome.io -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<title>Animated Icons</title>
+	<style>
+		#chain, #battery, #hourglass, #spinner, #refresh{
+			font-size: 50px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="chain" class="fa"></div>
+	<br><br>
+	<div id="battery" class="fa"></div>
+	<br><br>
+	<div id="hourglass" class="fa"></div>
+	<br><br>
+	<div id="refresh" class="fa fa-refresh fa-spin"></div>
+	<br><br>
+	<div id="spinner" class="fa fa-spinner fa-pulse"></div>
+
+<script>
+	//break chain animation
+	function breakChain() {
+		let chain = document.getElementById('chain');chain.innerHTML = "&#xf0c1;";  //solid chain
+
+		setTimeout(function(){
+			chain.innerHTML = "&#xf127;"; //broken chain
+		}, 1000);
+	}
+	//call chain animation
+	breakChain();
+	//animate every two seconds
+	setInterval(breakChain,2000);
+
+	//battery charge animation
+	function chargeBattery(){
+		let battery = document.getElementById('battery');battery.innerHTML = "&#xf244;";//empty battery
+
+		setTimeout(function(){
+			battery.innerHTML = "&#xf243;";// 1/4  battery
+		}, 1000);
+
+		setTimeout(function(){
+			battery.innerHTML = "&#xf242;";// 1/2  battery
+		}, 2000);
+
+		setTimeout(function(){
+			battery.innerHTML = "&#xf241;";// 3/4 battery
+		}, 3000);
+
+		setTimeout(function(){
+			battery.innerHTML = "&#xf240;";//full battery
+		}, 4000);
+	}
+	//call battery animation
+	chargeBattery();
+	//animate every five seconds
+	setInterval(chargeBattery,5000);
+
+	function hourGlass(){
+		let hourglass = document.getElementById('hourglass');
+		hourglass.innerHTML = "&#xf251;";//empty battery
+
+		setTimeout(function(){
+			hourglass.innerHTML = "&#xf252;";// 1/4  battery
+		}, 1000);
+
+		setTimeout(function(){
+			hourglass.innerHTML = "&#xf253;";// 1/2  battery
+		}, 2000);
+	}
+	//call hourglass animation
+	hourGlass();
+	//animate every five seconds
+	setInterval(hourGlass,3000);
+	</script>
+</body>
+
+</html>
